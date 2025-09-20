@@ -100,6 +100,85 @@ class DataExtractor:
 
         print("")
 
+    def phone_number_extractor(self):
+
+        """
+        This function extracts valid phone numbers
+        from the sampe text data
+        """
+
+        phone_pattern = r'\+?\d{1,3}[-.\s]?\d{3}[-.\s]?\d{3}[-.\s]?\d{3,4}'
+
+        r"""
+        Explanation of the phone pattern
+
+        1. \+?\d{1,3} -  This represents the country code section and
+                         indicates that the code must contain atleast
+                         once character accompained either with a plus
+                         sign or not
+
+        2. [-.\s]?\d{3} - This represents that the country code is followed
+                          by either a '-' or '.' or space then three digits
+
+        3. [-.\s]?\d{3,4} - This represents the last digits of the number
+                            must start with either a '-' or '.' or space
+                            then followed by atmost four digits
+        """
+
+        phones = re.findall(phone_pattern, self.sample_text)
+
+        print("")
+        print("===== PHONE NUMBERS FOUND =====")
+        if phones:
+            for i, phone in enumerate(phones, 1):
+                print(f"{i}. {phone}")
+        else:
+            print("No phone numbers found!")
+
+        print("")
+
+    def url_extractor(self):
+
+        """
+        This function extracts valid URL links from
+        the sample text
+        """
+
+        url_pattern = r'https?://(?:[a-zA-Z-]+\.)?[a-zA-Z-]+\.[a-zA-Z]{2,}'
+
+        r"""
+        Explanation of the url pattern
+
+        1. https?:// -         This represents that the url pattern must start with
+                               https://
+
+        2. (?:[a-zA-Z-]+\.) - This represents the subdomain and indicates that
+                              it must only contain letters and followed by a
+                              literal dot
+
+        3. [a-zA-Z-]+\. -     This represents the second section of the subdomain
+                              and indicates that it must include only letters and
+                              followed by a literal dot
+
+        4. [a-zA-Z]{2,} -     This represents the domain name and indicates that it
+                              must include a minimum of two letters
+
+
+        """
+
+        urls = re.findall(url_pattern, self.sample_text)
+
+        print("")
+        print("===== URL LINKS FOUND =====")
+        if urls:
+            for i, url in enumerate(urls, 1):
+                print(f"{i}. {url}")
+        else:
+            print("No phone numbers found!")
+
+        print("")
+
+
 
 def main():
 
@@ -125,10 +204,31 @@ def main():
 
 
     #Displaying the regex extraction menu
-    choice = extractor.menu_display()
+    while True:
+        choice = extractor.menu_display()
 
-    if choice == '1' :
-        extractor.email_extractor()
+        if choice == '1' :
+            print("")
+            print("Extracting valid email addressess...")
+            time.sleep(1.0)
+            extractor.email_extractor()
+
+        elif choice == '2':
+            print("")
+            print("Extracting valid phone numbers...")
+            time.sleep(1.0)
+            extractor.phone_number_extractor()
+
+        elif choice == '3':
+            print("")
+            print("Extracting valid URL links...")
+            time.sleep(1.0)
+            extractor.url_extractor()
+
+        elif choice == '7':
+            print("Exiting program....")
+            time.sleep(1.0)
+            break
 
 if __name__ == "__main__":
     main()

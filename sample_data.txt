@@ -7,7 +7,7 @@ Ugandan number: +256-777-967-578
 Rwandan number : +250-795-593-207
 
 Sample website URL's
-GitHub Link: https://github.com/L-nsamba
+GitHub Link: https://github.com/L-nsamba/
 Explore Uganda: https://exploreuganda.com/
 Python: https://www.python.org/
 Sky Sports: https://www.skysports.com/
@@ -19,7 +19,7 @@ MasterCard: 9090-8080-5050-1010
 Sample Discounts #deals #shopping #savemorespendless:
 
 #threaded Uganda is doing 20% discounts on all purchases
-above UGX 100,000
+above UGX 100,000 @ call (+1 123 456 7891)
 28% off shoes at LC Waikiki worth UGX 200,000
 50% off all KFC orders over UGX 75,000
 10% off all Iphones from ShopSmart starting at UGX 1,200,000
