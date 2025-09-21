@@ -142,7 +142,7 @@ class DataExtractor:
         the sample text
         """
 
-        url_pattern = r'https?://(?:[a-zA-Z-]+\.)?[a-zA-Z-]+\.[a-zA-Z]{2,}'
+        url_pattern = r'https?://(?:[a-zA-Z-]+\.)?[a-zA-Z-]+\.[a-zA-Z]{2,4}\b'
 
         r"""
         Explanation of the url pattern
@@ -150,16 +150,18 @@ class DataExtractor:
         1. https?:// -         This represents that the url pattern must start with
                                https://
 
-        2. (?:[a-zA-Z-]+\.) - This represents the subdomain and indicates that
-                              it must only contain letters and followed by a
-                              literal dot
+        2. (?:[a-zA-Z-]+\.)? - This represents the subdomain and makes it optional
+                               to include but if present it must contain only letters
 
         3. [a-zA-Z-]+\. -     This represents the second section of the subdomain
                               and indicates that it must include only letters and
                               followed by a literal dot
 
-        4. [a-zA-Z]{2,} -     This represents the domain name and indicates that it
-                              must include a minimum of two letters
+        4. [a-zA-Z]{2,4}  -    This represents the domain name and indicates that it
+                               must include a minimum of two letters and maximum four
+
+        5. \b              -  This represents the word boundary and indicates that
+                              the url must meet all those conditions to be extracted
 
 
         """
@@ -249,6 +251,29 @@ class DataExtractor:
 
         print("")
 
+    def currency_extractor(self):
+
+        """
+        This function extracts valid currencies from the
+        sample data file
+        """
+
+        currency_pattern = r'UGX\s\d{1,3}(?:,\d{3})+|\$\d+(?:\.\d{2})?'
+
+        currencies = re.findall(currency_pattern, self.sample_text)
+
+        print("")
+        print("===== CURRENCIES FOUND =====")
+
+        if currencies:
+            #This for loop creates a list of items that meet the criteria
+            for i, currency in enumerate(currencies, 1):
+                print(f"{i}. {currency}")
+        else:
+            print("No currencies found!")
+
+        print("")
+
 
 def main():
 
@@ -307,11 +332,22 @@ def main():
             time.sleep(0.5)
             extractor.hastag_extractor()
 
+        elif choice == '6':
+            print("")
+            print("Extracting valid currencies...")
+            time.sleep(0.5)
+            extractor.currency_extractor()
+
 
         elif choice == '7':
             print("Exiting program....")
             time.sleep(0.5)
             break
+
+        else:
+            time.sleep(0.5)
+            print("Please enter a valid number.")
+            print("")
 
 if __name__ == "__main__":
     main()

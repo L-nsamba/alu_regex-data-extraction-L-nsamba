@@ -20,13 +20,13 @@ Sample Discounts #deals #shopping #savemorespendless:
 
 #threaded Uganda is doing 20% discounts on all purchases
 above UGX 100,000 @ call (+1 123 456 7891)
-28% off shoes at LC Waikiki worth UGX 200,000
-50% off all KFC orders over UGX 75,000
-10% off all Iphones from ShopSmart starting at UGX 1,200,000
+28% off shoes at LC Waikiki worth UGX 200,000 ($60.00)
+50% off all KFC orders over UGX 75,000 ($20.00)
+10% off all Iphones from ShopSmart starting at UGX 1,200,000 ($350.00)
 
 Invalid data examples:
 wrong email: leon.com@gmail , leon.com
-wrong tel no: +256-190-103-1 , +256 123 456 789 0862
+wrong tel no: +256-190-103-1
 wrong URL: https://www.bbcnews
 fake card: 1234 p401
 wrong hashtag : # codingiscool
