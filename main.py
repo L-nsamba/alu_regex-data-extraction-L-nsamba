@@ -219,7 +219,7 @@ class DataExtractor:
         print("")
 
 
-    def hastag_extractor(self):
+    def hashtag_extractor(self):
 
         """
         This function extracts hashtaged text from the
@@ -347,7 +347,7 @@ def main():
             print("")
             print("Extracting valid hashtags...")
             time.sleep(0.5)
-            extractor.hastag_extractor()
+            extractor.hashtag_extractor()
 
         elif choice == '6':
             print("")
