@@ -1,4 +1,4 @@
-===== SAMPLE DATA #regex #dataextraction =====
+===== SAMPLE DATA #regex_assignment_2025 #dataextraction =====
 
 Contact Information #letsconnect
 Student email: l.nsamba@alustudent.com
@@ -26,6 +26,7 @@ above UGX 100,000 @ call (+1 123 456 7891)
 
 Invalid data examples:
 wrong email: leon.com@gmail , leon.com
-wrong tel no: +256-190-103-1 , +254-1234-7890-12344
+wrong tel no: +256-190-103-1 , +256 123 456 789 0862
 wrong URL: https://www.bbcnews
 fake card: 1234 p401
+wrong hashtag : # codingiscool

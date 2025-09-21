@@ -93,6 +93,7 @@ class DataExtractor:
         print("")
         print("===== EMAIL ADDRESSES FOUND =====")
         if emails:
+            #This for loop creates a list of items that meet the criteria
             for i, email in enumerate(emails, 1):
                 print(f"{i}. {email}")
         else:
@@ -107,22 +108,18 @@ class DataExtractor:
         from the sampe text data
         """
 
-        phone_pattern = r'\+?\d{1,3}[-.\s]?\d{3}[-.\s]?\d{3}[-.\s]?\d{3,4}'
+        phone_pattern = r'\+\d{1,3}[-.\s]\d{3}[-.\s]\d{3}[-.\s]\d{3}'
 
         r"""
-        Explanation of the phone pattern
+        Explanation of phone pattern
 
-        1. \+?\d{1,3} -  This represents the country code section and
-                         indicates that the code must contain atleast
-                         once character accompained either with a plus
-                         sign or not
+        1. \+\d{3} - This represents that the code must have between
+                     1,3 numbers
 
-        2. [-.\s]?\d{3} - This represents that the country code is followed
-                          by either a '-' or '.' or space then three digits
-
-        3. [-.\s]?\d{3,4} - This represents the last digits of the number
-                            must start with either a '-' or '.' or space
-                            then followed by atmost four digits
+        2. [-.\s]\d{3} - This represents that each field after the country
+                         code must be followed by either a -, . or space then
+                         three digits and the maximum digits after country code
+                         is nine
         """
 
         phones = re.findall(phone_pattern, self.sample_text)
@@ -130,6 +127,7 @@ class DataExtractor:
         print("")
         print("===== PHONE NUMBERS FOUND =====")
         if phones:
+            #This for loop creates a list of items that meet the criteria
             for i, phone in enumerate(phones, 1):
                 print(f"{i}. {phone}")
         else:
@@ -170,7 +168,9 @@ class DataExtractor:
 
         print("")
         print("===== URL LINKS FOUND =====")
+
         if urls:
+            #This for loop creates a list of items that meet the criteria
             for i, url in enumerate(urls, 1):
                 print(f"{i}. {url}")
         else:
@@ -178,6 +178,76 @@ class DataExtractor:
 
         print("")
 
+
+    def credit_card_extractor(self):
+
+        """
+        This function extracts valid credit card numbers
+        from the sample data file
+        """
+
+        credit_card_pattern = r'[0-9]{4}[-\s][0-9]{4}[-\s][0-9]{4}(?:[-\s][0-9]{4})?'
+
+
+        r"""
+        Explanation of the credit card pattern
+
+        1. [0-9]{4}[-\s]  - This represents that each of the fields
+                            of the credit card number must contain four digits
+                            followed by either a dash or space
+
+        2. (?:[-\s][0-9]{4})? - This represents that the credit card can
+                                have either three or four fields each only
+                                consisting of four numbers
+        """
+
+
+        cards = re.findall(credit_card_pattern, self.sample_text)
+
+        print("")
+        print("===== CREDIT CARDS FOUND =====")
+
+        if cards:
+            #This for loop creates a list of items that meet the criteria
+            for i, card in enumerate(cards, 1):
+                print(f"{i}. {card}")
+        else:
+            print("No credit cards found!")
+
+        print("")
+
+
+    def hastag_extractor(self):
+
+        """
+        This function extracts hashtaged text from the
+        sample data file
+        """
+
+        hashtag_pattern = r'#[a-zA-Z0-9_]+'
+
+        """
+        Explanation of the hashtag pattern
+
+        1. #[a-zA-Z0-9_] -  This represents that all texts that start
+                            with the hashtag symbol followed by any letter
+                            or number without any space but can be accompanied
+                            by an underscore will be extracted
+        """
+
+        hashtags = re.findall(hashtag_pattern, self.sample_text)
+
+        print("")
+        print("===== HASHTAGS FOUND =====")
+
+        if hashtags:
+            #This for loop creates a list of items that meet the criteria
+            for i, hashtag in enumerate(hashtags, 1):
+                print(f"{i}. {hashtag}")
+        else:
+            print("No hashtags found!")
+
+        print("")
 
 
 def main():
@@ -210,24 +280,37 @@ def main():
         if choice == '1' :
             print("")
             print("Extracting valid email addressess...")
-            time.sleep(1.0)
+            time.sleep(0.5)
             extractor.email_extractor()
 
         elif choice == '2':
             print("")
             print("Extracting valid phone numbers...")
-            time.sleep(1.0)
+            time.sleep(0.5)
             extractor.phone_number_extractor()
 
         elif choice == '3':
             print("")
             print("Extracting valid URL links...")
-            time.sleep(1.0)
+            time.sleep(0.5)
             extractor.url_extractor()
+
+        elif choice == '4':
+            print("")
+            print("Extracting valid credit cards...")
+            time.sleep(0.5)
+            extractor.credit_card_extractor()
+
+        elif choice == '5':
+            print("")
+            print("Extracting valid hashtags...")
+            time.sleep(0.5)
+            extractor.hastag_extractor()
+
 
         elif choice == '7':
             print("Exiting program....")
-            time.sleep(1.0)
+            time.sleep(0.5)
             break
 
 if __name__ == "__main__":
