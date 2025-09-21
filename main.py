@@ -260,6 +260,23 @@ class DataExtractor:
 
         currency_pattern = r'UGX\s\d{1,3}(?:,\d{3})+|\$\d+(?:\.\d{2})?'
 
+        r"""
+        Explanation of the currency pattern
+
+        1. UGX\s\d{1,3}  - This represents a possible currency format that
+                           starts with UGX (Uganda shillings) followed by
+                           a space and between 1-3 digits
+
+        2. (?:,\d{3})+   - This represents the optional characters after the
+                           first three digits that the user can add but specifies
+                           that if the user adds they must be 3 digits only
+
+        3. \$\d+(?:\.\d{2})? -  This represents the alternative currency (dollars)
+                                and indicates that the user must enter minimum
+                                of two characters if they add anything after the dot
+                                separator
+        """
+
         currencies = re.findall(currency_pattern, self.sample_text)
 
         print("")
