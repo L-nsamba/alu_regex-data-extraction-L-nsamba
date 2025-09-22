@@ -5,10 +5,10 @@ import time
 
 class DataExtractor:
 
-"""
-This class contains the functions with all the logic
-to run the program
-"""
+    """
+    This class contains the functions with all the
+    logic to run the program
+    """
 
     def __init__(self):
         self.sample_text = ""
