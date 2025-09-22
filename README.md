@@ -33,7 +33,7 @@ ii. Run the application
 📁 alu_regex-data-extraction-L-nsamba/
 ├── 📄main.py               #Main application file
 ├── 📄sample_data.txt       #Sample text data for extraction
-├── 📄README.ms             #Project documentation
+├── 📄README.md            #Project documentation
 ```
 
 ### 📖 Usage
