@@ -23,7 +23,7 @@ class DataExtractor:
             #Opening and reading the sample data file
             with open('sample_data.txt', 'r') as file:
                 self.sample_text = file.read()
-            print("Sample data loaded succesfully!")
+            print("Sample data loaded successfully!")
             print("")
             return True
 
@@ -108,7 +108,7 @@ class DataExtractor:
         from the sampe text data
         """
 
-        phone_pattern = r'\+\d{1,3}[-.\s]\d{3}[-.\s]\d{3}[-.\s]\d{3}'
+        phone_pattern = r'\+\d{1,3}[-.\s]\d{3}[-.\s]\d{3}[-.\s]\d{3,4}'
 
         r"""
         Explanation of phone pattern
@@ -142,7 +142,7 @@ class DataExtractor:
         the sample text
         """
 
-        url_pattern = r'https?://(?:[a-zA-Z-]+\.)?[a-zA-Z-]+\.[a-zA-Z]{2,4}\b'
+        url_pattern = r'https?://(?:[a-zA-Z-]+\.)*[a-zA-Z-]+\.[a-zA-Z]{2,4}\b'
 
         r"""
         Explanation of the url pattern
@@ -150,7 +150,7 @@ class DataExtractor:
         1. https?:// -         This represents that the url pattern must start with
                                https://
 
-        2. (?:[a-zA-Z-]+\.)? - This represents the subdomain and makes it optional
+        2. (?:[a-zA-Z-]+\.)* - This represents the subdomain and makes it optional
                                to include but if present it must contain only letters
 
         3. [a-zA-Z-]+\. -     This represents the second section of the subdomain
@@ -321,7 +321,7 @@ def main():
 
         if choice == '1' :
             print("")
-            print("Extracting valid email addressess...")
+            print("Extracting valid email addresses...")
             time.sleep(0.5)
             extractor.email_extractor()
 

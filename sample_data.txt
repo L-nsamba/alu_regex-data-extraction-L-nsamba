@@ -7,7 +7,7 @@ Ugandan number: +256-777-967-578
 Rwandan number : +250-795-593-207
 
 Sample website URL's
-GitHub Link: https://github.com/L-nsamba/
+GitHub Link: https://github.com/
 Explore Uganda: https://exploreuganda.com/
 Python: https://www.python.org/
 Sky Sports: https://www.skysports.com/
