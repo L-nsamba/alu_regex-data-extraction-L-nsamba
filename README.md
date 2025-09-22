@@ -51,7 +51,7 @@ ii. Run the application
 3. URL link extractor: ```https?://(?:[a-zA-Z-]+\.)*[a-zA-Z-]+\.[a-zA-Z]{2,4}\b```<br>
 4. Credit card extractor: ```[0-9]{4}[-\s][0-9]{4}[-\s][0-9]{4}(?:[-\s][0-9]{4})?```<br>
 5. Hashtag extractor: ```#[a-zA-Z0-9_]+```<br>
-6. Currency extractor: ```UGX\s\d{1,3}(?:,\d{3})+|\$\d+(?:\.\d{2})?```<br>
+6. Currency extractor: ```UGX\s\d{1,3}(?:,\d{3})+|\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?```<br>
 
 ### 🏗️ Project Development Notes
 This project demonstrates:
@@ -64,4 +64,3 @@ This project demonstrates:
 👨🏽‍💻**Leon Nsamba**<br>
 📧 **Email: l.nsamba@alustudent.com**<br>
 💻 **GitHub: [L-nsamba](https://github.com/L-nsamba)**
-

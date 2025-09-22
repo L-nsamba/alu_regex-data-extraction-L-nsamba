@@ -272,10 +272,10 @@ class DataExtractor:
                            first three digits that the user can add but specifies
                            that if the user adds they must be 3 digits only
 
-        3. \$\d+(?:\.\d{2})? -  This represents the alternative currency (dollars)
-                                and indicates that the user must enter minimum
-                                of two characters if they add anything after the dot
-                                separator
+        3. \$\d{1,3}(?:,\d{3})*(?:\.\d{2})? -    This represents the alternative currency (dollars)
+                                                 and indicates that the user must enter minimum
+                                                 of two characters if they add anything after the dot
+                                                 or comma separator
         """
 
         currencies = re.findall(currency_pattern, self.sample_text)
