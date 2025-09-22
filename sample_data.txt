@@ -1,4 +1,4 @@
-===== SAMPLE DATA #regex_assignment_2025 #dataextraction =====
+===== SAMPLE DATA #regex_assignment_2025 #dataextraction ==============
 
 Contact Information #letsconnect
 Student email: l.nsamba@alustudent.com , user@example.com
@@ -32,3 +32,4 @@ wrong URL: https://www.bbcnews
 fake card: 1234 p401
 wrong hashtag : # codingiscool
 wrong currency format: $-1, UGX1,0000 , UGX 1000,00, $ 2
+=======================================================================

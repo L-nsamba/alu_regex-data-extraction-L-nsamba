@@ -41,8 +41,9 @@ class DataExtractor:
         """
         This function contains the menu
         """
-
+        print("================================")
         print("===== REGEX EXTRACTOR MENU =====")
+        print("================================")
         print("")
         print("1. Extract email addresses")
         print("2. Extract telephone numbers")
