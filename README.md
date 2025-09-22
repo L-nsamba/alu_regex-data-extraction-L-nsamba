@@ -4,7 +4,7 @@
 <p>A Python-menu based regex data extraction tool that processes text files and
 extracts various types of structured data using regular expressions (Regex).
 This application demonstrates the power of regular expressions for data extraction
-from unstructured text, simulating real-world scenarios where develops need to
+from unstructured text, simulating real-world scenarios where developers need to
 extract specific information from large datasets.
 </p>
 
@@ -18,6 +18,15 @@ extract specific information from large datasets.
 <li>💰Currency: Regonizes US Dollars ($) and Uganda Shillings (UGX) currency ammounts</li>
 </p>
 
+
+### 📂 Project Structure
+```plaintext
+📁 alu_regex-data-extraction-L-nsamba/
+├── 📄main.py               #Main application file
+├── 📄sample_data.txt       #Sample text data for extraction
+├── 📄README.md             #Project documentation
+```
+
  ### 🛠️ Setup & Installation
  i. Clone the project repository locally using your desired terminal
  ```sh
@@ -27,13 +36,6 @@ extract specific information from large datasets.
 ii. Run the application
 ```sh
      python3 main.py
-```
-### 📂 Project Structure
-```plaintext
-📁 alu_regex-data-extraction-L-nsamba/
-├── 📄main.py               #Main application file
-├── 📄sample_data.txt       #Sample text data for extraction
-├── 📄README.md             #Project documentation
 ```
 
 ### 📖 Usage
@@ -57,3 +59,9 @@ This project demonstrates:
 <li>Object-oriented programming basics</li>
 <li>Menu-driven user interface</li>
 <li>Error handling and validation</li>
+
+### 👤 Author
+👨🏽‍💻**Leon Nsamba**<br>
+📧 **Email: l.nsamba@alustudent.com**<br>
+💻 **GitHub: [L-nsamba](https://github.com/L-nsamba)**
+
