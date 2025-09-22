@@ -2,12 +2,13 @@
 import re
 import time
 
-"""
-This class contains the function to open the sample
-data file
-"""
 
 class DataExtractor:
+
+"""
+This class contains the functions with all the logic
+to run the program
+"""
 
     def __init__(self):
         self.sample_text = ""
