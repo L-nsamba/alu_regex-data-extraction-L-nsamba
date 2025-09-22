@@ -105,7 +105,7 @@ class DataExtractor:
 
         """
         This function extracts valid phone numbers
-        from the sampe text data
+        from the sample text data
         """
 
         phone_pattern = r'\+\d{1,3}[-.\s]\d{3}[-.\s]\d{3}[-.\s]\d{3,4}'
@@ -176,7 +176,7 @@ class DataExtractor:
             for i, url in enumerate(urls, 1):
                 print(f"{i}. {url}")
         else:
-            print("No phone numbers found!")
+            print("No URL links found!")
 
         print("")
 
