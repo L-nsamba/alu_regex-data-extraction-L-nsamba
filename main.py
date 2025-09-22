@@ -259,7 +259,7 @@ class DataExtractor:
         sample data file
         """
 
-        currency_pattern = r'UGX\s\d{1,3}(?:,\d{3})+|\$\d+(?:\.\d{2})?'
+        currency_pattern = r'UGX\s\d{1,3}(?:,\d{3})+|\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?'
 
         r"""
         Explanation of the currency pattern

@@ -1,8 +1,8 @@
 ===== SAMPLE DATA #regex_assignment_2025 #dataextraction =====
 
 Contact Information #letsconnect
-Student email: l.nsamba@alustudent.com
-Personal email: nsleon.04@gmail.com
+Student email: l.nsamba@alustudent.com , user@example.com
+Personal email: nsleon.04@gmail.com , firstname.lastname@company.co.uk
 Ugandan number: +256-777-967-578
 Rwandan number : +250-795-593-207
 
@@ -22,8 +22,8 @@ Sample Discounts #deals #shopping #savemorespendless:
 $1 = UGX 4,000
 above UGX 100,000 @ call (+1 123 456 7891)
 28% off shoes at LC Waikiki worth UGX 200,000 ($60.00)
-50% off all KFC orders over UGX 75,000 ($20.00)
-10% off all Iphones from ShopSmart starting at UGX 1,200,000 ($350.00)
+50% off all KFC orders over UGX 75,000 ($19.99)
+10% off all Iphones from ShopSmart starting at UGX 1,200,000 ($1,234.56)
 
 Invalid data examples:
 wrong email: leon.com@gmail , leon.com
@@ -32,3 +32,4 @@ wrong URL: https://www.bbcnews
 fake card: 1234 p401
 wrong hashtag : # codingiscool
 wrong currency format: $-1, UGX1,0000 , UGX 1000,00, $ 2
+
