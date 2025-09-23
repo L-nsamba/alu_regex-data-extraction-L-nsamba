@@ -320,54 +320,61 @@ def main():
 
     #Displaying the regex extraction menu
     while True:
-        choice = extractor.menu_display()
+        try:
+            choice = extractor.menu_display()
 
-        if choice == '1' :
-            print("")
-            print("Extracting valid email addresses...")
-            time.sleep(0.5)
-            extractor.email_extractor()
+            if choice == '1' :
+                print("")
+                print("Extracting valid email addresses...")
+                time.sleep(0.5)
+                extractor.email_extractor()
 
-        elif choice == '2':
-            print("")
-            print("Extracting valid phone numbers...")
-            time.sleep(0.5)
-            extractor.phone_number_extractor()
+            elif choice == '2':
+                print("")
+                print("Extracting valid phone numbers...")
+                time.sleep(0.5)
+                extractor.phone_number_extractor()
 
-        elif choice == '3':
-            print("")
-            print("Extracting valid URL links...")
-            time.sleep(0.5)
-            extractor.url_extractor()
+            elif choice == '3':
+                print("")
+                print("Extracting valid URL links...")
+                time.sleep(0.5)
+                extractor.url_extractor()
 
-        elif choice == '4':
-            print("")
-            print("Extracting valid credit cards...")
-            time.sleep(0.5)
-            extractor.credit_card_extractor()
+            elif choice == '4':
+                print("")
+                print("Extracting valid credit cards...")
+                time.sleep(0.5)
+                extractor.credit_card_extractor()
 
-        elif choice == '5':
-            print("")
-            print("Extracting valid hashtags...")
-            time.sleep(0.5)
-            extractor.hashtag_extractor()
+            elif choice == '5':
+                print("")
+                print("Extracting valid hashtags...")
+                time.sleep(0.5)
+                extractor.hashtag_extractor()
 
-        elif choice == '6':
-            print("")
-            print("Extracting valid currencies...")
-            time.sleep(0.5)
-            extractor.currency_extractor()
+            elif choice == '6':
+                print("")
+                print("Extracting valid currencies...")
+                time.sleep(0.5)
+                extractor.currency_extractor()
 
 
-        elif choice == '7':
-            print("Exiting program....")
+            elif choice == '7':
+                print("Exiting program....")
+                time.sleep(0.5)
+                break
+
+            else:
+                time.sleep(0.5)
+                print("Please enter a valid number.")
+                print("")
+        except:
+            print("\nKeyboard interrupt")
+            print("Exiting program...")
             time.sleep(0.5)
             break
 
-        else:
-            time.sleep(0.5)
-            print("Please enter a valid number.")
-            print("")
 
 #Calling the main function to run the whole program
 if __name__ == "__main__":
