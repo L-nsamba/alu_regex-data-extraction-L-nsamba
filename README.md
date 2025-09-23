@@ -41,8 +41,9 @@ ii. Run the application
 ### 📖 Usage
 1. Lauch the application: Run ``` python3 main.py ```
 2. Load the sample data: The application automatically loads ``` sample_data.txt ``` 
-3. Select extraction type: Choose from the menu options [1-6]
-4. Option 7: Allows users to enter/paste their own text and extract specified fields from it
+3. Select extraction type: Choose from the menu options [1-6] 
+4. Option 7: Allows users to enter/paste their own text and extract specified fields from it <br>
+NB: Pasting multiple lines of code may lead to unexpected errors in shell terminal (post one line at a time)
 5. View results: Extracted data is displayed in a numbered list
 6. Repeat or exit: Continue with other extractions or exit program
 
