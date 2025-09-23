@@ -51,9 +51,10 @@ class DataExtractor:
         print("4. Extract credit card info")
         print("5. Extract hashtags")
         print("6. Extract currency ")
-        print("7. Exit")
+        print("7. Enter custom text")
+        print("8. Exit")
 
-        user_input = input("Enter your choice [1-7]: ")
+        user_input = input("Enter your choice [1-8]: ")
         return user_input
 
     def email_extractor(self):
@@ -294,6 +295,24 @@ class DataExtractor:
 
         print("")
 
+    def custom_text_input(self):
+
+        """
+        This function allows user to manually input custom text
+        """
+
+        print("")
+        print(" Warning: Entering custom text will overwrite the sample_data.txt.")
+        confirm = input("Do you want to proceed? (yes or no): ").strip().lower()
+
+        if confirm == "yes":
+            self.sample_text = input("\nEnter or paste your text here: ")
+            print("Custom text saved successfully!")
+            print("")
+            print("")
+        else:
+            print("Operation cancelled. Using current sample text")
+
 
 def main():
 
@@ -361,6 +380,9 @@ def main():
 
 
             elif choice == '7':
+                extractor.custom_text_input()
+
+            elif choice == '8':
                 print("Exiting program....")
                 time.sleep(0.5)
                 break
