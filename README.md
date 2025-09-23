@@ -40,7 +40,7 @@ ii. Run the application
 
 ### 📖 Usage
 1. Lauch the application: Run ``` python3 main.py ```
-2. Load the sample data: The application automatically loads ``` sample_data.txt ```
+2. Load the sample data: The application automatically loads ``` sample_data.txt ``` (You are free to add your own data to the file for additional tests)
 3. Select extraction type: Choose from the menu options [1-7]
 4. View results: Extracted data is displayed in a numbered list
 5. Repeat or exit: Continue with other extractions or exit program
