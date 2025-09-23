@@ -115,13 +115,13 @@ class DataExtractor:
         r"""
         Explanation of phone pattern
 
-        1. \+\d{3} - This represents that the code must have between
-                     1,3 numbers
+        1. '\+\d{1,3} - This represents that the code must have between
+                        1,3 numbers
 
-        2. [-.\s]\d{3} - This represents that each field after the country
-                         code must be followed by either a -, . or space then
-                         three digits and the maximum digits after country code
-                         is nine
+        2. [-.\s]\d{3}[-.\s]\d{3}[-.\s]\d{3,4} - This represents that each field after the country
+                                                code must be followed by either a -, . or space then
+                                                three digits and the maximum digits after country code
+                                                is nine
         """
 
         phones = re.findall(phone_pattern, self.sample_text)
@@ -200,9 +200,10 @@ class DataExtractor:
                             of the credit card number must contain four digits
                             followed by either a dash or space
 
-        2. (?:[-\s][0-9]{4})? - This represents that the credit card can
-                                have either three or four fields each only
-                                consisting of four numbers
+        2. [0-9]{4}[-\s][0-9]{4}(?:[-\s][0-9]{4})? - This represents that the credit card can
+                                                    have either three or four fields each only
+                                                    consisting of four numbers and separated by
+                                                    a dash , dot or space
         """
 
 
@@ -233,7 +234,7 @@ class DataExtractor:
         """
         Explanation of the hashtag pattern
 
-        1. #[a-zA-Z0-9_] -  This represents that all texts that start
+        1. #[a-zA-Z0-9_]+ -  This represents that all texts that start
                             with the hashtag symbol followed by any letter
                             or number without any space but can be accompanied
                             by an underscore will be extracted
@@ -368,5 +369,6 @@ def main():
             print("Please enter a valid number.")
             print("")
 
+#Calling the main function to run the whole program
 if __name__ == "__main__":
     main()
