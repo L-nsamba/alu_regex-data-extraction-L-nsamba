@@ -3,7 +3,7 @@
 Contact Information #letsconnect
 Student email: l.nsamba@alustudent.com , user@example.com
 Personal email: nsleon.04@gmail.com , firstname.lastname@company.co.uk
-Ugandan number: +256-777-967-578
+Ugandan number: +256.777.967.578
 Rwandan number : +250-795-593-207
 
 Sample website URL's https://www.example.com , https://subdomain.example.org
